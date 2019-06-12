@@ -1,5 +1,6 @@
 ## BlackbaudSkyApi-FENXT
 A Power BI custom data connector for Blackbaud's Financial Edge NXT (SKY API). The connector is not owned, developed or supported by Blackbaud, and as such is defined by Power BI as an [uncertified connector](https://docs.microsoft.com/en-us/connectors/custom-connectors/submit-certification#certification-criteria). See CHANGELOG.md for recent changes.
+
 ![PBIGetData](blobs/getdata.PNG "FENXT in Get Data")
 
 ## Getting Started
