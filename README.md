@@ -85,7 +85,7 @@ When using the connector, it is recommended to **only select the endpoints that 
 The connector supports scheduled refresh through the Power BI service via a Power BI On-Premises Data Gateway (Personal mode). In order to take advantage of this, the following steps need to be performed:
 
 1. Install the Power BI On-Premises Data Gateway in Personal mode
-2. Enable Custom Connector support in the Gateway - see guide [here](https://docs.microsoft.com/en-us/power-query/samples/trippin/9-testconnection/readme)
+2. Enable Custom Connector support in the Gateway - see guide [here](https://docs.microsoft.com/en-us/power-query/samples/trippin/9-testconnection/readme#enabling-custom-connectors-in-the-personal-gateway)
 3. Publish a workbook that uses your connector to PowerBI.com
 4. Configure scheduled refresh - see guide [here](https://docs.microsoft.com/en-us/power-query/samples/trippin/9-testconnection/readme#testing-scheduled-refresh) and follow the instructions from *After publishing, go to PowerBI.com and find the dataset...*
 
