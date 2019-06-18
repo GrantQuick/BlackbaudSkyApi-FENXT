@@ -77,6 +77,16 @@ The connector supports the following endpoints:
 * Cash receipt custom field
 * Treasury media type
 
+## Not Recommended Endpoints
+Unfortunately many Sky API endpoints do not facilitate the ability to get all data at once. Many of them require an ID of some kind to be passed before the underlying data can be returned. For example, it is not possible to return all journal entries in a single (paged) call to the Journal Entry endpoint. Instead the endpoint requires a batch_id to be passed as part of the call, which will only return the journal entries for that batch. Therefore in order to return all Journal Entries, we must first make as many calls as required to the Journal Batch endpoint in order to get a list of all the batch_ids, then make separate calls to the Journal Entries endpoint for every batch_id. This necessitates (potentially) thousands of API calls just to get all Journal Entry data back.
+
+My recommendation to Blackbaud would be to allow a zero or null value to be passed to the Journal Entry endpoint that when provided would return all data, rather than having to perform a separate call for each batch. This issue is apparent in a large number of endpoints within the Sky API, affecting several FENXT and RENXT endpoints (e.g. the Constituent Alias).
+
+In the interest of completeness for this connector, the intention will be to add these parameterised endpoints, despite the enormous overhead this places on bandwidth and API call quotas. That way, the "customer" can decide which of these not-recommended endpoints they are happy to include in Power BI, if any. These endpoints are labelled in the connector as Not Recommended
+
+### List of Implemented Endpoints which are Not Recommended
+* Journal entries
+
 ## Additional Information
 The connector generates a basic data model. Selected list or record type data fields have been expanded, which will increase row counts where "list" datatypes are nested within records.
 
