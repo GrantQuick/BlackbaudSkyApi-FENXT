@@ -86,6 +86,7 @@ In the interest of completeness for this connector, the intention will be to add
 
 ### List of Implemented Endpoints which are Not Recommended
 * Journal entries
+* Ledger Summary
 
 ## Additional Information
 The connector generates a basic data model. Selected list or record type data fields have been expanded, which will increase row counts where "list" datatypes are nested within records.
